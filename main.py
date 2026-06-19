@@ -27,12 +27,13 @@ def main():
             bücher_liste.append(momentanes_buch)
             print(f"eingabe {i + 1} erfolgreich abgeschlossen")
         else:
+            bücher_liste.append(momentanes_buch)
             print(f"eingabe {i + 1} konnte nich erfolgreich abgeschlossen werden")
 
         if i +1 == bücher_zahl:
             print("Alle eingaben abgeschlossen")
 
-        # Todo #3: Der Nutzer sollte gewarnt werden falls sein Buch
+        # Todo #3: Der Nutzer sollte gewarnt werden falls sein Buch✅
         # falsch ist. Es soll aber weiterhin in die Liste aufgenohmen werden.
 
     # Todo #1: Der Nutzer soll angezeigt bekommen das die Eingabe abgeschlossen ist.✅
