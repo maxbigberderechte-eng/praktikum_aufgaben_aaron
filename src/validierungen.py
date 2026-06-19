@@ -1,5 +1,5 @@
 
-# Todo #2: Es soll überprüft werden ob das Buch "korrekt" ist.
+# Todo #2: Es soll überprüft werden ob das Buch "korrekt" ist.✅
     # Ein Buch ist genau dann korrekt wenn Author und Titel Wörter mindestens der Länge eins sind.
 
 def buch_ist_korrekt(buch):
