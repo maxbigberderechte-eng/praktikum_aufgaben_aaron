@@ -23,25 +23,29 @@ def main():
         # In einem ersten Schritt ist es ok wenn sein Versuch als
         # Buch Eintrag zählt.
 
-        if buch_ist_korrekt(momentanes_buch):
-            bücher_liste.append(momentanes_buch)
-            print(f"eingabe {i + 1} erfolgreich abgeschlossen")
+        bestätigung = input("Wollen sie was verändern dann antworten sie mit ja:")
+        if bestätigung == "ja":
+            i -= 1
         else:
-            print(f"eingabe {i + 1} konnte nich erfolgreich abgeschlossen werden")
+            if buch_ist_korrekt(momentanes_buch):
+                bücher_liste.append(momentanes_buch)
+                print(f"eingabe {i + 1} erfolgreich abgeschlossen")
+            else:
+                print(f"eingabe {i + 1} konnte nich erfolgreich abgeschlossen werden")
 
-        if i +1 == bücher_zahl:
-            print("Alle eingaben abgeschlossen")
+            if i +1 == bücher_zahl:
+                print("Alle eingaben abgeschlossen")
 
-        # Todo #3: Der Nutzer sollte gewarnt werden falls sein Buch
-        # falsch ist. Es soll aber weiterhin in die Liste aufgenohmen werden.
+            # Todo #3: Der Nutzer sollte gewarnt werden falls sein Buch
+            # falsch ist. Es soll aber weiterhin in die Liste aufgenohmen werden.
 
-    # Todo #1: Der Nutzer soll angezeigt bekommen das die Eingabe abgeschlossen ist.✅
+        # Todo #1: Der Nutzer soll angezeigt bekommen das die Eingabe abgeschlossen ist.✅
 
-    # Todo #5: Der Nutzer soll gesagt bekommen wie viele der Bücher in seiner Liste korrekt sind und welche Bücher falsch sind.
+        # Todo #5: Der Nutzer soll gesagt bekommen wie viele der Bücher in seiner Liste korrekt sind und welche Bücher falsch sind.
 
-    if liste_ist_duplikat_frei(bücher_liste):
-        # Todo: Der Nutzer soll anzeigt bekommen das seine Liste keine Duplikate enthält
-        pass
+        if liste_ist_duplikat_frei(bücher_liste):
+            # Todo: Der Nutzer soll anzeigt bekommen das seine Liste keine Duplikate enthält
+            pass
 
 
 if __name__ == "__main__":
