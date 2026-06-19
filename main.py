@@ -13,40 +13,32 @@ def main():
     bücher_zahl = anzahl_eingabe()
 
     bücher_liste = []
+    bücher_korrekt = []
+    bücher_falsch = []
 
     for i in range(0, bücher_zahl):
         momentanes_buch = buch_eingabe()
 
-        # Todo #4: Der Nutzer soll das Buch bestätigen müssen, in einem
-        # Schritt. Wenn der Nutzer das Buch verwirft soll
-        # er erneut gefragt werden, das alte aber verworfen werden.
-        # In einem ersten Schritt ist es ok wenn sein Versuch als
-        # Buch Eintrag zählt.
 
-        bestätigung = input("Wollen sie was verändern dann antworten sie mit ja:")
+        print(momentanes_buch)
+        bestätigung = input("Bestätigen sie die eingaben mit ja:")
         if bestätigung == "ja":
-            i -= 1
-        else:
             if buch_ist_korrekt(momentanes_buch):
                 bücher_liste.append(momentanes_buch)
+                bücher_korrekt.append(momentanes_buch)
                 print(f"eingabe {i + 1} erfolgreich abgeschlossen")
             else:
+                bücher_liste.append(momentanes_buch)
+                bücher_falsch.append(momentanes_buch)
                 print(f"eingabe {i + 1} konnte nich erfolgreich abgeschlossen werden")
 
+    print("Alle eingaben abgeschlossen")
+    print(f"bücher korrekt: {bücher_korrekt}, Bücher nicht korrekt {bücher_falsch}")
 
-            if i +1 == bücher_zahl:
-                print("Alle eingaben abgeschlossen")
-        # Todo #3: Der Nutzer sollte gewarnt werden falls sein Buch✅
-        # falsch ist. Es soll aber weiterhin in die Liste aufgenohmen werden.
 
-        # Todo #1: Der Nutzer soll angezeigt bekommen das die Eingabe abgeschlossen ist.✅
-
-        # Todo #5: Der Nutzer soll gesagt bekommen wie viele der Bücher in seiner Liste korrekt sind und welche Bücher falsch sind.
-
-        if liste_ist_duplikat_frei(bücher_liste):
-            # Todo: Der Nutzer soll anzeigt bekommen das seine Liste keine Duplikate enthält
-            pass
-
+    if liste_ist_duplikat_frei(bücher_liste):
+        # Todo: Der Nutzer soll anzeigt bekommen das seine Liste keine Duplikate enthält
+        pass
 
 if __name__ == "__main__":
     main()
