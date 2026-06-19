@@ -1,6 +1,6 @@
 def buch_eingabe():
     author = input("Gib bitte einen Author an:")
-    titel = input("Gib bitte einen Author an:")
+    titel = input("Gib bitte einen Titel an:")
     return {"author": author, "titel": titel}
 
 

@@ -31,7 +31,7 @@ def main():
 
     # Todo #1: Der Nutzer soll angezeigt bekommen das die Eingabe abgeschlossen ist.
 
-    # Todo #4: Der Nutzer soll gesagt bekommen wie viele der Bücher in seiner Liste korrekt sind und welche Bücher falsch sind.
+    # Todo #5: Der Nutzer soll gesagt bekommen wie viele der Bücher in seiner Liste korrekt sind und welche Bücher falsch sind.
 
     if liste_ist_duplikat_frei(bücher_liste):
         # Todo: Der Nutzer soll anzeigt bekommen das seine Liste keine Duplikate enthält
