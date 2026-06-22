@@ -1,3 +1,5 @@
+from unittest import skip
+
 from src.input import anzahl_eingabe, buch_eingabe
 from src.validierungen import buch_ist_korrekt, liste_ist_duplikat_frei
 
@@ -19,9 +21,9 @@ def main():
     for i in range(0, bücher_zahl):
         momentanes_buch = buch_eingabe()
 
-
         print(momentanes_buch)
         bestätigung = input("Bestätigen sie die eingaben mit ja:")
+
         if bestätigung == "ja":
             if buch_ist_korrekt(momentanes_buch):
                 bücher_liste.append(momentanes_buch)
@@ -32,13 +34,16 @@ def main():
                 bücher_falsch.append(momentanes_buch)
                 print(f"eingabe {i + 1} konnte nich erfolgreich abgeschlossen werden")
 
+
     print("Alle eingaben abgeschlossen")
     print(f"bücher korrekt: {bücher_korrekt}, Bücher nicht korrekt {bücher_falsch}")
 
-
     if liste_ist_duplikat_frei(bücher_liste):
+        print("Duplikate gefunden")
         # Todo: Der Nutzer soll anzeigt bekommen das seine Liste keine Duplikate enthält
         pass
+    else:
+        print("kein Duplikate gefunden")
 
 if __name__ == "__main__":
     main()
