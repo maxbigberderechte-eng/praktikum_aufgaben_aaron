@@ -32,7 +32,7 @@ def main():
             else:
                 bücher_liste.append(momentanes_buch)
                 bücher_falsch.append(momentanes_buch)
-                print(f"eingabe {i + 1} konnte nich erfolgreich abgeschlossen werden")
+                print(f"eingabe {i + 1} konnte nicht erfolgreich abgeschlossen werden")
 
 
     print("Alle eingaben abgeschlossen")

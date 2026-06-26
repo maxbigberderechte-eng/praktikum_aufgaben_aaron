@@ -3,7 +3,7 @@
     # Ein Buch ist genau dann korrekt wenn Author und Titel Wörter mindestens der Länge eins sind.
 
 def buch_ist_korrekt(buch):
-    if len(buch["author"] + buch["titel"]) >= 2:
+    if len(buch["author"]) >= 1 and len(buch["titel"]) >= 1:
         return True
     else:
         return False
